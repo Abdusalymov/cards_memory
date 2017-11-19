@@ -3,7 +3,7 @@ const box_card = document.querySelector('.box');
 box_card.addEventListener('click', function(e){
      let el = e.target.parentElement;
      changeClass(el);
-     deleteEq(el);
+     deleteElements(el);
 });
 
 function changeClass(el){
@@ -11,31 +11,20 @@ function changeClass(el){
     
     setTimeout(function(){
         el.classList.remove('rotate');
-     }, 2050)
+     }, 1550)
 };
 
 let arr = [];
-function deleteEq(el){
-    let elem1 = el;
-    arr.push(elem1);
- 
-
+function deleteElements(el){
+    arr.push(el);
     if(arr[1] != undefined){
-        if(arr[0].dataset.marker == arr[1].dataset.marker){
-            alert('work');
+        if(arr[0].id + '1' == arr[1].id || arr[0].id == arr[1].id + '1' ){
             arr.forEach(function(item, i, arr){
-                item.style.display = 'none';
+                item.classList.add('hide');
             });
             arr = [];
         }else{
-            alert('isnt work');
             arr = [];
         }
-    }else{
-        alert('fack');
     }
-
-    
-      
-    
-}
+};

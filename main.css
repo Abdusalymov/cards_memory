@@ -6,33 +6,37 @@
     height: 560px;
     width: 830px;
     margin: auto;
-    cursor: pointer;
+    
+    
 }
-
 .card{
     position: relative;
     transform-style: preserve-3d;
     width: 130px;
     height: 180px;
-    
+    box-shadow: 1px 3px 4px 1px grey;
+    right: 0;
+    cursor: pointer;
 }
 .face{
-    width: 130px;
-    height: 180px;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    box-shadow: 1px 3px 4px 1px grey;
-    background: url(porsche_911_200x300.jpg);
 } 
 .back{
-    width: 130px;
-    height: 180px;
+    width: 100%;
+    height: 100%;
     background: rgb(138, 104, 10);
     position: absolute;
     transform: translateZ(0.1px);
 }
-
+.hide{
+    right: 5000px;
+    transition: right 2s;
+    box-shadow: none;
+}
 .rotate{
-    animation: card 2s linear ;
+    animation: card 1.5s linear ;
 }
 @keyframes card {
   100% {
