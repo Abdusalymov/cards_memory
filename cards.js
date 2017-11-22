@@ -6,6 +6,7 @@ box_card.addEventListener('click', function(e){
      deleteElements(el);
 });
 
+
 function changeClass(el){
     el.classList.add('rotate');
     
@@ -13,6 +14,7 @@ function changeClass(el){
         el.classList.remove('rotate');
      }, 1550)
 };
+
 
 let arr = [];
 function deleteElements(el){
@@ -23,8 +25,25 @@ function deleteElements(el){
                 item.classList.add('hide');
             });
             arr = [];
+            finish();
         }else{
             arr = [];
         }
     }
+};
+
+
+
+function finish(){
+   let allCards = box_card.children;
+   let counter = 0;
+   for(let i= 0; i < allCards.length; i++  ){
+        if(allCards[i].classList.contains('hide')){
+            counter ++;
+         }if(counter == allCards.length){
+            box_card.innerHTML = '<h1>You are Winner!<h1>';
+         }
+   }
+    
+    
 };

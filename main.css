@@ -9,6 +9,14 @@
     
     
 }
+.box h1 {
+    color: pink;
+    font-size: 7rem;
+    position: absolute;
+    top: 24%;
+    left: 23%;
+    transition: top 3s;
+}
 .card{
     position: relative;
     transform-style: preserve-3d;
@@ -29,6 +37,8 @@
     background: rgb(138, 104, 10);
     position: absolute;
     transform: translateZ(0.1px);
+    /* opacity: .3; */
+    
 }
 .hide{
     right: 5000px;
