@@ -1,3 +1,8 @@
+body{
+    background: url(images/red_wood.jpg);
+    
+}
+
 .box{
     display: flex;
     flex-wrap: wrap;
@@ -22,7 +27,7 @@
     transform-style: preserve-3d;
     width: 130px;
     height: 180px;
-    box-shadow: 1px 3px 4px 1px grey;
+    /* box-shadow: 1px 3px 4px 1px grey; */
     right: 0;
     cursor: pointer;
 }
