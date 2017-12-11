@@ -12,7 +12,7 @@ function changeClass(el){
     
     setTimeout(function(){
         el.classList.remove('rotate');
-     }, 1550)
+     }, 3050)
 };
 
 
