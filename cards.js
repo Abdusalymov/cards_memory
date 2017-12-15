@@ -1,34 +1,35 @@
 const box_card = document.querySelector('.box');
 
-box_card.addEventListener('click', function(e){
-     let el = e.target.parentElement;
-     changeClass(el);
-     deleteElements(el);
+box_card.addEventListener('click', (e) =>{
+   if (e.target.className === "back"){
+        let card = e.target.parentElement;
+        changeClass(card);
+        deleteCard(card);
+   }
 });
 
 
-function changeClass(el){
-    el.classList.add('rotate');
-    
-    setTimeout(function(){
-        el.classList.remove('rotate');
-     }, 3050)
+function changeClass(card){
+    card.classList.add('rotate');
+    setTimeout(()=>{card.classList.remove('rotate');}, 2050)
 };
 
 
-let arr = [];
-function deleteElements(el){
-    arr.push(el);
-    if(arr[1] != undefined){
-        if(arr[0].id + '1' == arr[1].id || arr[0].id == arr[1].id + '1' ){
-            arr.forEach(function(item, i, arr){
-                item.classList.add('hide');
-            });
-            arr = [];
+let clickedСards = [];
+function deleteCard(card){
+    clickedСards.push(card);
+    if(clickedСards[1]){
+
+        if(clickedСards[0].id + '1' == clickedСards[1].id || clickedСards[0].id == clickedСards[1].id + '1' ){
+            clickedСards.forEach((item, i, clickedСards) =>{
+            item.classList.add('hide');
+        });
+            clickedСards = [];
             finish();
-        }else{
-            arr = [];
-        }
+
+         }else{
+            clickedСards = [];
+          }
     }
 };
 
