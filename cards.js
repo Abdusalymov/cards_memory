@@ -29,9 +29,11 @@ function deleteCard(card){
 
          }else{
             clickedСards = [];
-          }
+         }
     }
 };
+
+
 
 
 
