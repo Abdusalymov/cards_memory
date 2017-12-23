@@ -18,14 +18,14 @@ body{
       margin: auto;
 
 }
-.box h1 {
+/* .box h1 {
     color: pink;
     font-size: 7rem;
     position: absolute;
     top: 24%;
     left: 23%;
     transition: top 3s;
-}
+} */
 .card{
     position: relative;
     transform-style: preserve-3d;
@@ -50,7 +50,7 @@ body{
     position: absolute;
     background: white;
     border-radius: 5px;
-/*     opacity: .3;  */
+    opacity: 0; 
    } 
 .back{
     width: 100%;
@@ -59,7 +59,7 @@ body{
     background: linear-gradient(to bottom, #b4ddb4 0%,#83c783 4%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%);
     position: absolute;
     transform: translateZ(1px);
-/*     opacity: 0; */
+    opacity: 0;
     border-radius: 5px;
 }
 .hide{
@@ -69,6 +69,9 @@ body{
 }
 .rotate{
     animation: card 2s linear ;
+}
+.some{
+    transform:rotateY(180deg);
 }
 @keyframes card {
         0%{
@@ -91,3 +94,36 @@ body{
             box-shadow: 5px 2px 5px 0px rgba(0,0,0,.7);
     }
 }
+
+.finish{
+    width: 660px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none;
+}
+
+
+.finish h1{
+    font-size: 6rem;
+    color: white;
+    
+}
+.finish a{
+    font-size: 2rem;
+    float: right;
+}
+
+.finish a:hover{
+    color: white;
+}
+
+
+
+
+
+
